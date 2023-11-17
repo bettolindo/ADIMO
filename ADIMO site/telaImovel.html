@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check-out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .container .property {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .container .property img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container .property h2 {
+            margin-top: 0;
+        }
+
+        .container .property button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container .property button:hover {
+            background-color: #45a049;
+        }
+
+        .container .property .success-message {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="property">
+        <img src="imovel_image_url" alt="Imóvel">
+        <h2>Título do Imóvel</h2>
+        <p>Descrição do imóvel...</p>
+        <p>Informações adicionais...</p>
+        <button>Reservar</button>
+        <div class="success-message">Reserva bem-sucedida!</div>
+    </div>
+</div>
+
+<script>
+    const button = document.querySelector(".property button");
+    const successMessage = document.querySelector(".property .success-message");
+
+    button.addEventListener("click", () => {
+        successMessage.style.display = "block";
+    });
+</script>
+
+</body>
+</html>

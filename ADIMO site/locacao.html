@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locação de Imóvel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <h1>Formulário de Locação de Imóvel</h1>
+    <form id="myForm">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="phone">Telefone:</label><br>
+        <input type="tel" id="phone" name="phone"><br>
+
+        <label for="imovel">Imóvel:</label><br>
+        <select id="imovel" name="imovel">
+            <option value="">Selecione um imóvel</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+        </select><br>
+
+        <label for="rentValue">Valor da Locação:</label><br>
+        <input type="number" id="rentValue" name="rentValue"><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let imovel = document.getElementById('imovel').value;
+    let rentValue = document.getElementById('rentValue').value;
+
+    alert(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nImóvel: ${imovel}\nValor da Locação: ${rentValue}`);
+});
+    </script>
+</body>
+</html>

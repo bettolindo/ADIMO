@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 1000px;
+            padding: 16px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-shadow: 0px 0px 10px 0px #C0C0C0;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .container .navbar {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .container .navbar a {
+            text-decoration: none;
+            color: #2196F3;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .container .navbar a:hover {
+            background-color: #ddd;
+        }
+
+        .container .properties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .container .property {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #C0C0C0;
+        }
+
+        .container .property h2 {
+            margin-bottom: 10px;
+        }
+
+        .container .property p {
+            margin-bottom: 10px;
+        }
+
+        .container .property button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container .property button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="navbar">
+            <a href="#">Pesquisar Imóveis</a>
+            <a href="#">Reservas</a>
+            <a href="#">Configurações</a>
+        </div>
+        <div class="properties">
+            <div class="property">
+                <h2>Imóvel 1</h2>
+                <p>Descrição do imóvel 1</p>
+                <button>Check-out</button>
+            </div>
+            <div class="property">
+                <h2>Imóvel 2</h2>
+                <p>Descrição do imóvel 2</p>
+                <button>Check-out</button>
+            </div>
+            <div class="property">
+                <h2>Imóvel 3</h2>
+                <p>Descrição do imóvel 3</p>
+                <button>Check-out</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

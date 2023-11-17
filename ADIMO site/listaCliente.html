@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Desejo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+}
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#wishlist {
+    height: 300px;
+    overflow-y: auto;
+}
+div[id^="wishlistItem"] {
+    transition: background-color 0.3s;
+}
+
+div[id^="wishlistItem"]:hover {
+    background-color: #f1f1f1;
+}
+div[id^="wishlistItem"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <h1>Lista de Desejo</h1>
+    <form id="myForm">
+        <label for="imovel">Imóvel:</label><br>
+        <input type="text" id="imovel" name="imovel"><br>
+
+        <label for="localizacao">Localização:</label><br>
+        <input type="text" id="localizacao" name="localizacao"><br>
+
+        <label for="rentValue">Valor da Locação:</label><br>
+        <input type="number" id="rentValue" name="rentValue"><br>
+
+        <button type="submit">Adicionar</button>
+    </form>
+    <div id="wishlist"></div>
+    <script>
+        let wishlist = [];
+
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let imovel = document.getElementById('imovel').value;
+    let localizacao = document.getElementById('localizacao').value;
+    let rentValue = document.getElementById('rentValue').value;
+
+    let newImovel = {
+        imovel: imovel,
+        localizacao: localizacao,
+        rentValue: rentValue
+    };
+
+    wishlist.push(newImovel);
+    renderWishlist();
+});
+
+function renderWishlist() {
+    let wishlistDiv = document.getElementById('wishlist');
+    wishlistDiv.innerHTML = '';
+
+    wishlist.forEach(function(item, index) {
+        let itemDiv = document.createElement('div');
+        itemDiv.textContent = `Imóvel: ${item.imovel}, Localização: ${item.localizacao}, Valor da Locação: ${item.rentValue}`;
+        wishlistDiv.appendChild(itemDiv);
+    });
+}
+    </script>
+</body>
+</html>

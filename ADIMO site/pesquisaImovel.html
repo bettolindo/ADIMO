@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Imóveis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-shadow: 0px 0px 10px 0px grey;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .container .filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .container .filters label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .container .filters input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
+        }
+
+        .container .filters button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container .filters button:hover {
+            background-color: #45a049;
+        }
+
+        .container .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .container .result {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px grey;
+        }
+
+        .container .result img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .container .result h2 {
+            margin-bottom: 10px;
+        }
+
+        .container .result p {
+            margin-bottom: 10px;
+        }
+
+        .container .result button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container .result button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pesquisar Imóveis</h1>
+        <form class="filters">
+            <label for="property-type">Tipo de Imóvel</label>
+            <input type="text" id="property-type" name="property-type">
+
+            <label for="price">Preço</label>
+            <input type="text" id="price" name="price">
+
+            <label for="location">Localização</label>
+            <input type="text" id="location" name="location">
+
+            <label for="availability-date">Data de Disponibilidade</label>
+            <input type="date" id="availability-date" name="availability-date">
+
+            <button type="submit">Pesquisar</button>
+        </form>
+        <div class="results">
+            <div class="result">
+                <img src="https://via.placeholder.com/300x200" alt="Imóvel">
+                <h2>Título do Imóvel</h2>
+                <p>Descrição do imóvel</p>
+                <p>R$ 1.000,00</p>
+                <button>Mais Informações</button>
+            </div>
+            <!-- Adicione mais divs .result conforme necessário -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adimo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #4CAF50;
+        }
+        .navbar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a.active {
+        background-color: #ddd;
+        color: black;
+        }
+        .navbar a:hover {
+            background: #45a049;
+            color: black;
+        }
+        .navbar a.right {
+            float: right;
+        }
+        .navbar input {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #45a049;
+        }
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .navbar input {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+        }
+        .painel {
+            background-color: #C0C0C0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .painel ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .painel li {
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #808080;
+            background-color: #A9A9A9;
+        }
+        .painel img {
+        max-width: 100%;
+        height: auto;
+        }
+        .painel a {
+        text-decoration: none;
+        color: #000;
+        }
+        .painel a:hover {
+        color: #4682B4;
+        }
+        .painel li div {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+        }
+        .painel li div h3 {
+            margin: 0;
+            padding: 0;
+        }
+         .imgCasas{
+          width: 380px;
+          height: 200px;
+         }
+         .logo-sem-texto{
+          width: 80px;
+          height: 50px;
+         }
+         
+    </style>
+</head>
+<body>
+  <h1>Adimo - A melhor Imobiliaria para o melhor cliente!</h1>
+    <div class="navbar">
+        <a href="loginCliente.html">Login</a>
+        <a href="listaCliente.html">Lista de Desejos</a>
+        <a href="pesquisaImovel.html">Casas</a>
+        <img src="img/logo_sem_texto.png" class="logo-sem-texto"
+       
+          person_outline
+          </span></a>
+        
+    </div>
+    
+    <div class="painel">
+        <h2>Imoveis Disponiveis</h2>
+        <ul>
+            <li>
+                <div>
+                    <h3>Casa 1</h3>
+                    <img src="img/casa moderna.png" alt="casa moderna" class="imgCasas">
+                    <p>Descrição da casa 1...</p>
+                    <a href="telaImovel.html" class="Mais_Info">Mais Info...</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>Casa 2</h3>
+                    <img src="img/casa moderna.png" alt="casa moderna" class="imgCasas">
+                    <p>Descrição da casa 2...</p>
+                    <a href="#Mais_Info" class="Mais_Info">Mais Info...</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>Casa 3</h3>
+                    <img src="img/casa moderna.png" alt="casa moderna" class="imgCasas">
+                    <p>Descrição da casa 3...</p>
+                    <a href="#Mais_Info" class="Mais_Info">Mais Info...</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>Casa 4</h3>
+                    <img src="img/casa moderna.png" alt="casa moderna" class="imgCasas">
+                    <p>Descrição da casa 4...</p>
+                    <a href="#Mais_Info" class="Mais_Info">Mais Info...</a>
+                </div>
+            </li>
+          </div>
+
+      </li>
+         
+
+        <script>
+            // ... A função exibirImoveis() e o código para carregar a página
+        </script>
+            
+        </ul>
+    </div>
+</body>
+</html>
